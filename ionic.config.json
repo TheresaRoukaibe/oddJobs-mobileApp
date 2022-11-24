@@ -1,0 +1,7 @@
+{
+  "name": "oddJobs",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

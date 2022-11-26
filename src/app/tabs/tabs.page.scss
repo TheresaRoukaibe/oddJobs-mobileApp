@@ -5,3 +5,7 @@ ion-tab-bar, .tab{
 ion-icon, ion-label{
     color: black;
 }
+
+ion-tab-button.tab-selected ion-icon{
+    color: orange;
+}

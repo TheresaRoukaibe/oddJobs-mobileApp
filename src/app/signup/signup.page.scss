@@ -34,7 +34,7 @@ color: #000000;
 
 }
 
-ion-item{
+ion-item.item{
     --background: rgb(248, 217, 159);
 }
 
@@ -45,6 +45,7 @@ ion-radio-group.label{
 .item{
 width: 90%;
 margin-left: 10px;
+border-radius: 25%;
 }
 
 .form{

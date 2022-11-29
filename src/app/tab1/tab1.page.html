@@ -4,6 +4,9 @@
       People are looking for: 
     </ion-title>
   </ion-toolbar>
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
@@ -13,5 +16,32 @@
     </ion-toolbar>
   </ion-header>
 
-  
+  <ion-card class="card">
+  <ion-card-header>
+    <ion-card-title>Job Title</ion-card-title>
+    <ion-card-subtitle class="sub">Job Place</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    Here's a small text description for the card content. Nothing more, nothing less.
+  </ion-card-content>
+
+  <ion-button class="button" fill="clear">Details</ion-button>
+</ion-card>
+
+<ion-fab slot="fixed" horizontal="center" vertical="bottom">
+  <ion-fab-button>
+    <ion-icon name="add"></ion-icon>
+  </ion-fab-button>
+
+  <ion-fab-list side="end">
+    <ion-fab-button>
+      <ion-icon class="icons" name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-button>
+      <ion-icon class="icons" name="trash"></ion-icon>
+    </ion-fab-button>
+
+  </ion-fab-list>
+</ion-fab>
 </ion-content>

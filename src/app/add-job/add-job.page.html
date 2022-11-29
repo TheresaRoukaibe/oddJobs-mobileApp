@@ -1,9 +1,76 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Post a job offer</ion-title>
+    <ion-title class="title">Post a job offer</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content class="background">
+  <ion-grid>
+  <ion-row>
+    <ion-col>
+      <ion-item>
+        <ion-label class="label" position="floating">What are you looking for?</ion-label>
+        <ion-input type="text" placeholder="Enter the job title"></ion-input>
+      </ion-item>
+    </ion-col>
+    </ion-row>
+  
+  <ion-row>
+    <ion-col>
+    <ion-item>
+    <ion-label class="label" position="floating">How much do you pay?</ion-label>
+    <ion-input type="number" placeholder="Enter job salary"></ion-input>
+    </ion-item>
+    </ion-col>
+    </ion-row>
+  
+    
+    <ion-row>
+    <ion-col>
+    <ion-item  fill="outline">
+    <ion-label class="label" position="stacked">When does the job start?</ion-label>
+    <ion-input type="date"></ion-input>
+    </ion-item>
+    </ion-col>
+    </ion-row>
 
+    <ion-row>
+      <ion-col>
+      <ion-item  fill="outline">
+      <ion-label  class="label" class="label" position="stacked">When does the job end?</ion-label>
+      <ion-input type="date"></ion-input>
+      </ion-item>
+      </ion-col>
+      </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-item>
+          <ion-label class="label" position="floating">Where is the job site?</ion-label>
+          <ion-input type="text" placeholder="Specify job location"></ion-input>
+        </ion-item>
+      </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label class="label" position="floating">Please mention any details</ion-label>
+            <ion-textarea [autoGrow]="true" placeholder="Specify job demands"></ion-textarea>
+          </ion-item>
+        </ion-col>
+        </ion-row>
+  
+        <ion-row>
+          <ion-col>
+            <ion-button (click)="goBack()" shape="round" class="cancel"> CANCEL 
+            </ion-button>
+      </ion-col>
+      <ion-col>
+        <ion-button shape="round" class="post"> POST
+        </ion-button>
+  </ion-col>
+      </ion-row>
+  
+  </ion-grid>
 </ion-content>

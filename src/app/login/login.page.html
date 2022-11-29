@@ -1,9 +1,55 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>login</ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content>
+<ion-content class="page">
+<div class="container">
+<h1 class="header"> Sign In </h1>
+</div>
+
+<ion-grid class="grid"> 
+
+<ion-row>
+<ion-col>
+<ion-item>
+<ion-label position="floating">Email</ion-label>
+<div slot="start" class="icon-wrapper">
+<ion-icon class="icon" slot="start" name="mail"> </ion-icon>
+</div>
+<ion-input type="email"></ion-input>
+</ion-item>
+</ion-col>
+</ion-row>
+
+<ion-row >
+<ion-col>
+<ion-item fill="outline">
+<ion-label position="floating">Password</ion-label>
+<div slot="start" class="icon-wrapper">
+<ion-icon class="icon" slot="start" name="lock-closed"> </ion-icon>
+</div>
+<ion-input type="password"></ion-input>
+</ion-item>
+</ion-col>
+</ion-row>
+
+</ion-grid>
+
+<ion-row>
+  <ion-col>
+  <ion-button class="login-button" expand="block"> Sign In </ion-button>
+  </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+    <h1 class="separator1"></h1>
+    <h1 class="text">OR</h1>
+    <h1 class="separator2"></h1>
+  </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col>
+      <ion-button class="signup-button" expand="block"> Sign Up </ion-button>
+</ion-col>
+</ion-row>
 
 </ion-content>

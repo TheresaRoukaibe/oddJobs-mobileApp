@@ -1,0 +1,93 @@
+ion-content{
+    --ion-background-color: #FCE5AA !important;
+}
+
+.container{
+    display:flex ;
+    justify-content: center;
+}
+
+.header{
+position: absolute;
+width: 141px;
+height: 43px;
+font-family: 'Merriweather Sans';
+font-style: normal;
+font-weight: 400;
+font-size: 23px;
+line-height: 29px;
+text-align: center;
+color: #000000;
+border: 5px solid orange;
+border-radius: 15%;
+margin-top: 50%;
+
+}
+
+.grid{
+    margin-top: 70%;
+}
+
+.icon-wrapper{
+    width: 50px;
+height: 50px;
+text-align: center;
+    border-radius:20%;
+    background: #F7C138;
+    justify-content: center;
+
+}
+
+.icon{
+    width: 35px;
+    height: 35px;
+    margin-top: 5px;
+}
+
+.login-button{
+    color:white;
+}
+
+ion-button.login-button {
+    --background: #F7C138;
+    }
+
+.separator1{
+position: absolute;
+width: 25%;
+height: 0px;
+left: 27px;
+border: 1px solid #000000;
+    }
+
+.separator2{
+    position: absolute;
+width: 25%;
+height: 0px;
+left: 195px;
+right: 27px;
+border: 1px solid #000000;
+}
+
+.text{
+position: absolute;
+width: 25px;
+margin-left: 45%;
+font-family: 'Poppins';
+font-style: normal;
+font-size: 16px;
+line-height: 36px;
+text-align: center;
+
+color: #000000;
+margin-top: 0%;
+}
+
+ion-button.signup-button {
+    --background: rgb(255, 115, 0);
+    }
+
+.signup-button{
+ color:white;
+ margin-top: 20%;
+}

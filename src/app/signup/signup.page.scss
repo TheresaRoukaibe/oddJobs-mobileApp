@@ -1,3 +1,61 @@
 .background{
     --background: url(../../assets/imgs/regBG.jpg) 0 0/100% 100% no-repeat;
+    display:flex;
+    justify-content:center;
 }
+
+.header{
+position: absolute;
+width: 261px;
+height: 36px;
+
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 700;
+font-size: 24px;
+line-height: 36px;
+
+text-align: center;
+
+color: #000000;
+}
+
+.text{
+position: absolute;
+width: 340px;
+height: 30px;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 30px;
+margin-top: 15%;
+color: #000000;
+
+}
+
+ion-item{
+    --background: rgb(248, 217, 159);
+}
+
+ion-radio-group.label{
+    --background: rgb(248, 217, 159);
+}
+
+.item{
+width: 90%;
+margin-left: 10px;
+}
+
+.form{
+    margin-top:30%;
+}
+
+.register{
+    color: white;
+    margin-left: 60%;
+}
+
+ion-button.register{
+    --background: orangered;
+    }

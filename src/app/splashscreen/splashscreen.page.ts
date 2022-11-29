@@ -9,7 +9,7 @@ export class SplashscreenPage implements OnInit {
 
   constructor(public router:Router) { 
     setTimeout(()=>{
-    this.router.navigateByUrl('login');
+    this.router.navigateByUrl('');
   }, 3000);
   
   }

@@ -20,33 +20,13 @@
         border: 3px solid white;
         width: 100px;
         height: 100px;
-        margin-left: 30%;
+        margin-left:30%;
         margin-top: 10%;
 
 
     }
 
-    .first{
-        padding-top:70px;
 
-        .name{
-position: absolute;
-width: 119px;
-height: 38px;
-top: 0px;
-margin-left: 30%;
-font-family: 'Poppins';
-font-style: normal;
-font-weight: 700;
-font-size: 25px;
-line-height: 38px;
-
-text-align: center;
-
-color: #000000;
-}
-
-    }
 
     .content{
         background:white;
@@ -107,3 +87,20 @@ ion-fab-button{
     --color: black;
 }
 
+.name{
+    position: absolute;
+    width: 119px;
+    height: 38px;
+    top: 20px;
+    margin-left: 25%;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 38px;
+    
+    text-align: center;
+    
+    color: #000000;
+    }
+    

@@ -1,17 +1,91 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
-  </ion-toolbar>
-</ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
+  <div class="main">
+
+
+    <div class="user">
+      <img class="profile" src="../../assets/imgs/default.jpg">
+      <div class="first">
+        <ion-label class="name">User Name</ion-label>
+      </div>
+      
+    </div>
+
+    <div class="content">
+<div class="details"> 
+
+  <ion-grid fixed>
+<ion-row>
+  <ion-col size="12">
+    <div class="flex_div">
+      <ion-item>
+        <ion-icon class="icon" name="mail" slot="start"></ion-icon>
+        <h1 class="heading">Email</h1>
+      </ion-item>
+    </div>
+    <div class="flex_div">
+      <ion-item>
+        <p class="info"> Details</p>
+      </ion-item>
+    </div>
+    <div class="flex_div">
+      <ion-item>
+        <ion-icon class="icon" name="calendar" slot="start"></ion-icon>
+        <h1 class="heading"> Birthday </h1>
+      </ion-item>
+    </div>
+    <div class="flex_div">
+      <ion-item>
+        <p class="info"> Details</p>
+      </ion-item>
+    </div>
+    <div class="flex_div">
+      <ion-item>
+        <ion-icon class="icon" name="call" slot="start"></ion-icon>
+        <h1 class="heading"> Phone Number </h1>
+      </ion-item>
+    </div>
+    <div class="flex_div">
+      <ion-item>
+        <p class="info"> Details</p>
+      </ion-item>
+    </div>
+
+    <div class="flex_div">
+      <ion-item>
+        <ion-icon class="icon" name="home" slot="start"></ion-icon>
+        <h1 class="heading"> Address</h1>
+      </ion-item>
+    </div>
+    <div class="flex_div">
+      <ion-item>
+        <p class="info"> Details</p>
+      </ion-item>
+    </div>
+  </ion-col>
+</ion-row>
+  </ion-grid>
+</div>
+    </div>
+
+  </div>
+
+
+  <ion-fab class="edit" slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="chevron-up-circle"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="pencil"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="bookmark"></ion-icon>
+      </ion-fab-button>
+      <ion-fab-button>
+        <ion-icon name="briefcase"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 </ion-content>

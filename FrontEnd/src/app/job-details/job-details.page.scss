@@ -1,0 +1,107 @@
+ion-content{
+    --background: #FF8C00;
+    position:relative;
+
+
+}
+
+ion-button{
+    height: 60px;
+    width: 60px;
+
+}
+    .card{
+        height: 90%;
+        width: 100%;
+        background: white;
+        position: absolute;
+        bottom: 0;
+        border-radius: 3rem 3rem 0 0; 
+        padding: 2rem;
+
+    }
+
+ion-icon{
+color: black !important;
+}
+
+.title{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+padding-bottom: 5px;
+}
+.details{
+    display:flex;
+    align-items: center;
+    justify-content:space-between;
+}
+h1{
+    font-weight: 700;
+    font-size: 24px;
+    color: orange;
+}
+
+p{
+    font-size: 18px;
+    font-weight: normal;
+    color:grey;
+
+}
+
+.description{
+    display:flex;
+    align-items: center;
+    justify-content:center;
+    padding-top: 10px;
+}
+
+.desc-title{
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 26px;
+color: #000000;
+background: orange;
+padding-right: 50px;
+padding-left: 50px;
+align-content: center;
+padding-bottom: 5px;
+
+}
+
+.btn-div{
+    display:flex;
+    justify-content: center;
+    width: 100%;
+}
+
+ion-button.btn{
+    --background: rgb(255, 196, 0);
+    --color: black;
+    font-family: 'Poppins';
+font-weight: 700;
+width: 80%;
+}
+
+.label{
+    font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 17px;
+line-height: 26px;
+color: #000000;
+margin-right: 10px;
+}
+
+ion-badge {
+    --background: orangered;
+    --color: white;
+    --padding-end: 20px;
+    --padding-start: 20px;
+  }
+
+sup{
+    font-size: 12px;;
+}

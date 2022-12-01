@@ -15,4 +15,8 @@ export class Tab1Page {
     this.router.navigateByUrl('add-job');
   }
 
+  seeDetails() {
+    this.router.navigateByUrl('job-details');
+  }
+
 }

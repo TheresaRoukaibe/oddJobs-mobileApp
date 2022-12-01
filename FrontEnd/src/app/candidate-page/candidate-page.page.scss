@@ -1,0 +1,32 @@
+ion-content{
+    --ion-background-color: lightgoldenrodyellow !important;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+
+ion-button{
+    --color: white;
+    --background: orange;
+    margin-left: 60%;
+}
+
+.title{
+    font-weight: 700;
+    font-size: 24px;
+    color: orange;
+    font-family: 'Poppins';
+}
+
+.container1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+justify-content: center !important;
+color: orange;
+font-weight: 700;
+font-size: 28px;
+font-family: 'Poppins';
+
+}
+

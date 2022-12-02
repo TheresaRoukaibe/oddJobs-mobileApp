@@ -37,6 +37,10 @@ const routes: Routes = [
   {
     path: 'edit-profile',
     loadChildren: () => import('./edit-profile/edit-profile.module').then( m => m.EditProfilePageModule)
+  },
+  {
+    path: 'candidate-page',
+    loadChildren: () => import('./candidate-page/candidate-page.module').then( m => m.CandidatePagePageModule)
   }
 ];
 @NgModule({

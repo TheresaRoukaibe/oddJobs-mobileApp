@@ -1,0 +1,42 @@
+<?php
+header('Access-Control-Allow-Origin: *');
+header('Access-Control-Allow-Methods: GET, POST');
+header('Access-Control-Allow-Headers: * ');
+
+include "connection.php";
+$response = [];
+
+if(isset($_POST['email']) && isset($_POST['password'])){
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $hashed_pass = password_hash($password, PASSWORD_DEFAULT);
+
+    if(empty($email) || empty($password)){
+        $response['status'] = "Missing information";
+    }else{
+    $query = $mysqli->prepare("SELECT * FROM users WHERE email=?");
+    $query->bind_param("s", $email);
+    $query->execute();
+
+    if(!$query){
+        $response['status'] = "Account not found";
+    }else{
+        $array = $query->get_result();
+        $user = $array->fetch_assoc();
+        $user_email = $user['email'];
+        $user_pass = $user['password'];
+        if(password_verify($password, $user_pass)){
+            $response['status'] = $user;
+
+        }else{
+            $response['status'] = 'Wrong password';
+        }
+    }
+    }
+
+}else{
+    $response['status'] = "Missing information";
+}
+
+echo json_encode($response);
+?>

@@ -16,29 +16,33 @@ $dob = date('Y-m-d', strtotime($_POST['dob']));
 $address= $_POST['address'];
 $number= $_POST['number'];
 
-
-
-$verify = "SELECT * FROM users WHERE email='$email'";
-$verify = mysqli_query($mysqli, $verify);
-
-if(mysqli_num_rows($verify) == 0){
-    //email is free to use, proceed to registration
-    $query = $mysqli->prepare("INSERT INTO users(username, email, password, dob, address, gender, number) VALUES (?,?,?,?,?,?,?)");
-    $query->bind_param("sssssss", $name, $email, $hashed_pass, $dob, $address, $gender,  $number);
-    $query->execute();
-
-
-    $response['status'] = "User registered";
-
-
-    
+if(empty($name) || empty($email) || empty($passowrd) || empty($gender) || empty($dob) || empty($address) || empty($number)){
+    $response['status'] = "Missing information";
 }else{
-    $response['status'] = "Email exists";
+    $verify = "SELECT * FROM users WHERE email='$email'";
+    $verify = mysqli_query($mysqli, $verify);
+    
+    if(mysqli_num_rows($verify) == 0){
+        //email is free to use, proceed to registration
+        $query = $mysqli->prepare("INSERT INTO users(username, email, password, dob, address, gender, number) VALUES (?,?,?,?,?,?,?)");
+        $query->bind_param("sssssss", $name, $email, $hashed_pass, $dob, $address, $gender,  $number);
+        $query->execute();
+    
+    
+        $response['status'] = "User registered";
+    
+    
+        
+    }else{
+        $response['status'] = "Email exists";
+    }
 }
+
 
 }else{
     $response['status'] = "Missing info";
 }
+
 
 echo json_encode($response);
 

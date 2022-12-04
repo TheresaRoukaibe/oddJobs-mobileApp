@@ -16,7 +16,7 @@ $dob = date('Y-m-d', strtotime($_POST['dob']));
 $address= $_POST['address'];
 $number= $_POST['number'];
 
-if(empty($name) || empty($email) || empty($passowrd) || empty($gender) || empty($dob) || empty($address) || empty($number)){
+if(empty($name) || empty($email) || empty($password) || empty($gender) || empty($dob) || empty($address) || empty($number)){
     $response['status'] = "Missing information";
 }else{
     $verify = "SELECT * FROM users WHERE email='$email'";

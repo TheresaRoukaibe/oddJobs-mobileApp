@@ -28,8 +28,5 @@ if(isset($_GET['id']) && !empty($user_id)){
 }else{
     $response['status'] = "User Id missing";
 }
-
-
-
 echo json_encode($response);
 ?>

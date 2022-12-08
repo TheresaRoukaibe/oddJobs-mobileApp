@@ -16,6 +16,7 @@ export class AddJobPage implements OnInit {
   end_on:string= "";
   description:string="";
   location:string="";
+error:string="";
 
   constructor(private service:JobService, private router:Router) { }
 
@@ -34,7 +35,7 @@ export class AddJobPage implements OnInit {
        const result = JSON.parse(str);
       const status = result['status'];
        if(status == "Missing info" || status == "Missing information"){
-         
+         this.error = "Please fill all fields!"
        }else if (status == "Job Added"){
          this.router.navigateByUrl('');
       }

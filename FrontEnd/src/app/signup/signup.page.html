@@ -14,12 +14,13 @@
   </ion-col>
 </ion-row>
 
+
 <ion-grid class="form">
 <ion-row>
   <ion-col>
     <ion-item class="item">
       <ion-label  position="floating">What's your name?</ion-label>
-      <ion-input type="text" placeholder="Enter your name"></ion-input>
+      <ion-input [(ngModel)] ="username" type="text" placeholder="Enter your name"></ion-input>
     </ion-item>
   </ion-col>
   </ion-row>
@@ -28,7 +29,7 @@
   <ion-col>
   <ion-item class="item">
   <ion-label position="floating">What's your email?</ion-label>
-  <ion-input type="email" placeholder="Enter your email"></ion-input>
+  <ion-input [(ngModel)] ="email" type="email" placeholder="Enter your email"></ion-input>
   </ion-item>
   </ion-col>
   </ion-row>
@@ -37,7 +38,7 @@
   <ion-col>
   <ion-item class="item" fill="outline">
   <ion-label position="floating">Create a Password</ion-label>
-  <ion-input type="password" placeholder="Enter a password"></ion-input>
+  <ion-input [(ngModel)] ="password" type="password" placeholder="Enter a password"></ion-input>
   </ion-item>
   </ion-col>
   </ion-row>
@@ -46,18 +47,18 @@
   <ion-col>
   <ion-item class="item" fill="outline">
   <ion-label position="stacked">When's your birthday?</ion-label>
-  <ion-input type="date"></ion-input>
+  <ion-input [(ngModel)] ="dob" type="date"></ion-input>
   </ion-item>
   </ion-col>
   </ion-row>
   
   <ion-row>
   <ion-col>
-  <ion-list >
-  <ion-radio-group>
+  <ion-list>
+  <ion-radio-group [(ngModel)] ="gender">
   <ion-item *ngFor="let gender of gender_list">
   <ion-label> {{gender}} </ion-label>
-  <ion-radio value="{{gender.toLowerCase()}}"> </ion-radio>
+  <ion-radio value="{{gender.toLowerCase()}}" > </ion-radio>
   </ion-item>
   </ion-radio-group>
   </ion-list>
@@ -68,14 +69,29 @@
     <ion-col>
       <ion-item class="item">
         <ion-label position="floating">How to reach you?</ion-label>
-        <ion-input placeholder="Enter your number"></ion-input>
+        <ion-input [(ngModel)] ="number" placeholder="Enter your number" maxlength="8"></ion-input>
       </ion-item>
     </ion-col>
     </ion-row>
 
     <ion-row>
       <ion-col>
-        <ion-button shape="round" class="register"> Sign Up 
+        <ion-item class="item">
+          <ion-label position="floating">Where do you live?</ion-label>
+          <ion-input [(ngModel)] ="address" placeholder="Enter your address"></ion-input>
+        </ion-item>
+      </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-label  class="error" color="danger">{{error}}</ion-label>
+        </ion-col>
+      </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <ion-button (click)="register()" shape="round" class="register"> Sign Up 
         </ion-button>
   </ion-col>
   </ion-row>

@@ -4,6 +4,7 @@
 <h1 class="header"> Sign In </h1>
 </div>
 
+
 <ion-grid class="grid"> 
 
 <ion-row>
@@ -13,7 +14,7 @@
 <div slot="start" class="icon-wrapper">
 <ion-icon class="icon" slot="start" name="mail"> </ion-icon>
 </div>
-<ion-input type="email"></ion-input>
+<ion-input type="email" [(ngModel)]="email"></ion-input>
 </ion-item>
 </ion-col>
 </ion-row>
@@ -25,16 +26,23 @@
 <div slot="start" class="icon-wrapper">
 <ion-icon class="icon" slot="start" name="lock-closed"> </ion-icon>
 </div>
-<ion-input type="password"></ion-input>
+<ion-input [(ngModel)]="password" type="password"></ion-input>
 </ion-item>
 </ion-col>
 </ion-row>
+
+<ion-row>
+  <ion-col>
+    <ion-label color="danger">{{error}}</ion-label>
+  </ion-col>
+</ion-row>
+
 
 </ion-grid>
 
 <ion-row>
   <ion-col>
-  <ion-button class="login-button" expand="block"> Sign In </ion-button>
+  <ion-button (click) ="login()" class="login-button" expand="block"> Sign In </ion-button>
   </ion-col>
   </ion-row>
 

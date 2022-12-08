@@ -6,6 +6,8 @@ header('Access-Control-Allow-Headers: * ');
 include "connection.php";
 $response = [];
 
+$_POST = json_decode(file_get_contents('php://input'), true);
+
 if(isset($_POST['email']) && isset($_POST['password'])){
     $email = $_POST['email'];
     $password = $_POST['password'];
@@ -26,7 +28,7 @@ if(isset($_POST['email']) && isset($_POST['password'])){
         $user_email = $user['email'];
         $user_pass = $user['password'];
         if(password_verify($password, $user_pass)){
-            $response['status'] = $user;
+            $response['status'] = $user['id'];
 
         }else{
             $response['status'] = 'Wrong password';

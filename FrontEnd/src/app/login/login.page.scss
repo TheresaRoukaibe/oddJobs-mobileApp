@@ -24,6 +24,11 @@ margin-top: 50%;
 
 }
 
+.error{
+    margin-top: 10%;
+    justify-content: center;
+}
+
 .grid{
     margin-top: 70%;
 }
@@ -50,6 +55,7 @@ text-align: center;
 
 ion-button.login-button {
     --background: #F7C138;
+    --background-hover: orangered;
     }
 
 .separator1{
@@ -85,6 +91,7 @@ margin-top: 0%;
 
 ion-button.signup-button {
     --background: rgb(255, 115, 0);
+    --background-hover: #F7C138;
     }
 
 .signup-button{

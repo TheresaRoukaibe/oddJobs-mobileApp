@@ -34,6 +34,15 @@ color: #000000;
 
 }
 
+.error{
+position: absolute;
+font-family: 'Poppins';
+font-style: normal;
+font-weight: 300;
+font-size: 18px;
+line-height: 30px;
+}
+
 ion-item.item{
     --background: rgb(248, 217, 159);
 }
@@ -55,8 +64,10 @@ border-radius: 25%;
 .register{
     color: white;
     margin-left: 60%;
+    margin-top: 5%;
 }
 
 ion-button.register{
     --background: orangered;
+    --background-hover: rgb(248, 217, 159);
     }

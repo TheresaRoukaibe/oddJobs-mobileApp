@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../apis/user.service';
+import { Preferences } from '@capacitor/preferences';
+
 
 @Component({
   selector: 'app-login',
@@ -33,7 +35,11 @@ error:string = "";
       }else if(status == "Wrong password"){
         this.error="Incorrect password!";
       }else{
-        
+      Preferences.set({
+key: "id",
+value: status,
+      });
+      this.router.navigateByUrl('');
       }
      }
       );

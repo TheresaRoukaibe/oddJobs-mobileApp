@@ -10,7 +10,7 @@
     <ion-col>
       <ion-item>
         <ion-label class="label" position="floating">What are you looking for?</ion-label>
-        <ion-input type="text" placeholder="Enter the job title"></ion-input>
+        <ion-input [(ngModel)]="title" type="text" placeholder="Enter the job title"></ion-input>
       </ion-item>
     </ion-col>
     </ion-row>
@@ -19,7 +19,7 @@
     <ion-col>
     <ion-item>
     <ion-label class="label" position="floating">How much do you pay?</ion-label>
-    <ion-input type="number" placeholder="Enter job salary"></ion-input>
+    <ion-input [(ngModel)]="salary" type="number" placeholder="Enter job salary"></ion-input>
     </ion-item>
     </ion-col>
     </ion-row>
@@ -28,7 +28,7 @@
       <ion-col>
       <ion-item>
       <ion-label class="label" position="floating">How old should applicants be?</ion-label>
-      <ion-input type="number" placeholder="Enter age requirement"></ion-input>
+      <ion-input [(ngModel)]="age" type="number" placeholder="Enter age requirement"></ion-input>
       </ion-item>
       </ion-col>
       </ion-row>
@@ -38,7 +38,7 @@
     <ion-col>
     <ion-item  fill="outline">
     <ion-label class="label" position="stacked">When does the job start?</ion-label>
-    <ion-input type="date"></ion-input>
+    <ion-input [(ngModel)]="start_from" type="date"></ion-input>
     </ion-item>
     </ion-col>
     </ion-row>
@@ -47,7 +47,7 @@
       <ion-col>
       <ion-item  fill="outline">
       <ion-label  class="label" class="label" position="stacked">When does the job end?</ion-label>
-      <ion-input type="date"></ion-input>
+      <ion-input [(ngModel)]="end_on" type="date"></ion-input>
       </ion-item>
       </ion-col>
       </ion-row>
@@ -56,7 +56,7 @@
       <ion-col>
         <ion-item>
           <ion-label class="label" position="floating">Where is the job site?</ion-label>
-          <ion-input type="text" placeholder="Specify job location"></ion-input>
+          <ion-input [(ngModel)]="location" type="text" placeholder="Specify job location"></ion-input>
         </ion-item>
       </ion-col>
       </ion-row>
@@ -65,7 +65,7 @@
         <ion-col>
           <ion-item>
             <ion-label class="label" position="floating">Please mention any details</ion-label>
-            <ion-textarea [autoGrow]="true" placeholder="Specify job demands"></ion-textarea>
+            <ion-textarea [(ngModel)]="description" [autoGrow]="true" placeholder="Specify job demands"></ion-textarea>
           </ion-item>
         </ion-col>
         </ion-row>
@@ -76,7 +76,7 @@
             </ion-button>
       </ion-col>
       <ion-col>
-        <ion-button shape="round" class="post"> POST
+        <ion-button (click)="add()" shape="round" class="post"> POST
         </ion-button>
   </ion-col>
       </ion-row>

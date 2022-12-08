@@ -5,6 +5,7 @@ header('Access-Control-Allow-Headers: * ');
 
 include "connection.php";
 $response = [];
+$_POST = json_decode(file_get_contents('php://input'), true);
 
 if(isset($_POST['title']) && isset($_POST['salary']) && isset($_POST['age_requirement']) && isset($_POST['location']) && isset($_POST['description']) && isset($_POST['start_from']) && isset($_POST['end_on']) && isset($_POST['user_id'])){
 $title= $_POST['title'];

@@ -36,8 +36,10 @@ error:string = "";
         this.error="Incorrect password!";
       }else{
       Preferences.set({
-key: "id",
-value: status,
+key: 'user',
+value: JSON.stringify({
+id: status
+})
       });
       this.router.navigateByUrl('');
       }

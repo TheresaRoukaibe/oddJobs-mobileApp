@@ -10,20 +10,23 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
+  <ion-refresher slot="fixed" (ionRefresh)="handleRefresh($event)">
+    <ion-refresher-content></ion-refresher-content>
+  </ion-refresher>
   <ion-header collapse="condense">
     <ion-toolbar>
       <ion-title class="title" size="large"> People are looking for: </ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <ion-card class="card">
+  <ion-card class="card" *ngFor="let job of jobs">
   <ion-card-header>
-    <ion-card-title>Job Title</ion-card-title>
-    <ion-card-subtitle class="sub">Job Place</ion-card-subtitle>
+    <ion-card-title>{{job.title}}</ion-card-title>
+    <ion-card-subtitle class="sub">{{job.location}}</ion-card-subtitle>
   </ion-card-header>
 
   <ion-card-content>
-    Here's a small text description for the card content. Nothing more, nothing less.
+   {{job.description}}
   </ion-card-content>
 
   <ion-button class="button" fill="clear" (click)="seeDetails()">Details</ion-button>

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { JobService } from '../apis/job.service';
+
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -7,13 +9,32 @@ import { Router } from '@angular/router';
 })
 export class Tab1Page {
 
-  constructor(private router:Router) {
-    
+  constructor(private service:JobService, private router:Router) {}
+
+  jobs: any = [];
+
+  handleRefresh(event: any) {
+    setTimeout(() => {
+      this.service.get_jobs().subscribe(response => {
+        this.jobs = response;
+      });
+      event.target.complete();
+    }, 2000);
+  };
+
+
+
+  ionViewDidEnter() {
+    this.service.get_jobs().subscribe(response => {
+      this.jobs = response;
+    });
   }
 
    goToAddPage() {
     this.router.navigateByUrl('add-job');
   }
+
+  
 
   seeDetails() {
     this.router.navigateByUrl('job-details');

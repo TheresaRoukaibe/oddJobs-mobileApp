@@ -6,13 +6,13 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content *ngFor="let user of users">
   <ion-grid class="form">
     <ion-row>
       <ion-col>
         <ion-item class="item">
-          <ion-label  class="label"  position="floating">New Name: </ion-label>
-          <ion-input type="text" value="Old Name"></ion-input>
+          <ion-label  class="label"  position="floating">New User Name: </ion-label>
+          <ion-input [(ngModel)] ="username" type="text" ></ion-input>
         </ion-item>
       </ion-col>
       </ion-row>
@@ -21,7 +21,7 @@
       <ion-col>
       <ion-item class="item">
       <ion-label class="label"  position="floating">New Email: </ion-label>
-      <ion-input type="email" value="Old Email"></ion-input>
+      <ion-input [(ngModel)] ="email" type="email" ></ion-input>
       </ion-item>
       </ion-col>
       </ion-row>
@@ -30,7 +30,7 @@
         <ion-col>
         <ion-item class="item">
         <ion-label class="label" position="floating">New Password: </ion-label>
-        <ion-input type="password"></ion-input>
+        <ion-input [(ngModel)] ="password" type="password"></ion-input>
         </ion-item>
         </ion-col>
         </ion-row>
@@ -41,15 +41,30 @@
         <ion-col>
           <ion-item class="item">
             <ion-label class="label"  position="floating">New Address: </ion-label>
-            <ion-input value="Old Address"></ion-input>
+            <ion-input [(ngModel)] = "address" ></ion-input>
           </ion-item>
         </ion-col>
         </ion-row>
+
+        <ion-row>
+          <ion-col>
+            <ion-item class="item">
+              <ion-label class="label"  position="floating">New Number: </ion-label>
+              <ion-input [(ngModel)] ="number"></ion-input>
+            </ion-item>
+          </ion-col>
+          </ion-row>
+
+          <ion-row>
+            <ion-col>
+                <ion-label color="danger">{{error}} </ion-label>
+            </ion-col>
+            </ion-row>
     
         <div>
         <ion-row>
           <ion-col>
-            <ion-button shape="round" class="register"> Apply Changes 
+            <ion-button (click)="edit_info()" shape="round" class="register"> Apply Changes 
             </ion-button>
       </ion-col>
       </ion-row>

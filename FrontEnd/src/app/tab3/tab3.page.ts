@@ -29,11 +29,6 @@ export class Tab3Page {
     const user_id = JSON.parse(user.value || '{}');
     this.service.get_user(user_id['id']).subscribe(response => {
       this.users= response;
-      //const str = JSON.stringify(response);
-      //const result = JSON.parse(str);
-     //const status = result['status'];
-     //this.users = status;
-     //console.log(this.users);
     });
   }
 }

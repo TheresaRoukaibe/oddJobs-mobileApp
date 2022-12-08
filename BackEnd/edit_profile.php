@@ -5,6 +5,7 @@ header('Access-Control-Allow-Headers: * ');
 
 include "connection.php";
 $response = [];
+$_POST = json_decode(file_get_contents('php://input'), true);
 
 if(isset($_POST['user_id']) && isset($_POST['username']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['address']) && isset($_POST['number'])){
 $id = $_POST['user_id'];
@@ -21,6 +22,7 @@ if(empty($id) || empty($name) || empty($email) || empty($password) || empty($add
     $verify = "SELECT * FROM users WHERE email='$email'";
     $verify = mysqli_query($mysqli, $verify);
     
+
     if(mysqli_num_rows($verify) == 0){
         //email is free to use, proceed to changing profile
         $query = $mysqli->prepare("UPDATE users SET username=?, email=?, password=?, address=?, number=? WHERE id=?");
@@ -30,8 +32,6 @@ if(empty($id) || empty($name) || empty($email) || empty($password) || empty($add
     
         $response['status'] = "User Info edited";
     
-    
-        
     }else{
         $response['status'] = "Email exists";
     }

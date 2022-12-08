@@ -32,6 +32,25 @@ private base_url:string = "http://localhost/oddJobs/BackEnd/";
       return response;
   }
 
+  editUser(id:string, username:string, email:string, password:string, address:string, number:string){
+    const headers: HttpHeaders = new HttpHeaders({'Content-Type' : 'application/json'});
+    const options= { 
+      headers: headers
+    }
+
+    const body = {
+      "user_id": id,
+"username": username,
+"email" : email,
+"password" : password,
+"address" : address,
+"number" : number
+    }
+
+     const response = this.http.post(this.base_url + "edit_profile.php", body, options);
+      return response;
+    }
+  
   addUser(username: string, email:string, password:string, gender:string, dob:string, address:string, number:string ){
     const headers: HttpHeaders = new HttpHeaders({'Content-Type' : 'application/json'});
     const options= { 

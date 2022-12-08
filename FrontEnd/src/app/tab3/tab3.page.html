@@ -1,15 +1,15 @@
 
-<ion-content>
+<ion-content *ngFor="let user of users">
 
   <div class="main">
 
-
     <div class="user">
-    
-        <ion-label class="name">User Name</ion-label>
-     
+      <div style="align-items:center; margin-top:50%">
+      <ion-label class="name">{{user.username}}</ion-label>
+    </div>
+  <div>
       <img class="profile" src="../../assets/imgs/default.jpg">
-      
+    </div>
     </div>
 
     <div class="content">
@@ -26,7 +26,7 @@
     </div>
     <div class="flex_div">
       <ion-item>
-        <p class="info"> Details</p>
+        <p class="info"> {{user.email}}</p>
       </ion-item>
     </div>
     <div class="flex_div">
@@ -37,7 +37,7 @@
     </div>
     <div class="flex_div">
       <ion-item>
-        <p class="info"> Details</p>
+        <p class="info"> {{user.dob}}</p>
       </ion-item>
     </div>
     <div class="flex_div">
@@ -48,7 +48,7 @@
     </div>
     <div class="flex_div">
       <ion-item>
-        <p class="info"> Details</p>
+        <p class="info"> {{user.number}}</p>
       </ion-item>
     </div>
 
@@ -60,7 +60,7 @@
     </div>
     <div class="flex_div">
       <ion-item>
-        <p class="info"> Details</p>
+        <p class="info"> {{user.address}}</p>
       </ion-item>
     </div>
   </ion-col>

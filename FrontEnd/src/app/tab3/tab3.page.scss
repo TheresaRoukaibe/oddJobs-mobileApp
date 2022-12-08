@@ -20,8 +20,6 @@
         border: 3px solid white;
         width: 100px;
         height: 100px;
-        margin-left:30%;
-        margin-top: 10%;
 
 
     }
@@ -85,6 +83,7 @@ color: grey;
 ion-fab-button{
     --background: orange ;
     --color: black;
+    --background-hover: orangered;
 }
 
 .name{
@@ -92,15 +91,13 @@ ion-fab-button{
     width: 119px;
     height: 38px;
     top: 20px;
-    margin-left: 25%;
     font-family: 'Poppins';
     font-style: normal;
     font-weight: 700;
-    font-size: 25px;
+    font-size: 20px;
     line-height: 38px;
-    
     text-align: center;
-    
     color: #000000;
+    margin-top: 15%;
     }
     

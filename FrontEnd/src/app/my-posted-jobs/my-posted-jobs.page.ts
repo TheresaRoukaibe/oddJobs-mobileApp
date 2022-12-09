@@ -29,8 +29,8 @@ error:string = "";
    
   }
 
-  seeCandidates(){
-this.router.navigateByUrl('candidate-page');
+  seeCandidates(job_id: string){
+    this.router.navigate(["/candidate-page"], {state: { id : job_id }});
   }
 
   goBack(){

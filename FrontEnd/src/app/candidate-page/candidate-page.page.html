@@ -2,16 +2,18 @@
 
 <ion-content>
   <div class="container1">
-<h1 class="header"> Hire from this list! </h1>
+<h6 style="color:orangered; padding: 10%; justify-content:center; align-items: center; font-size: 18px; font-weight: 700;">{{error}}</h6>
 </div>
 
-  <ion-card>
+  <ion-card *ngFor="let candidate of candidates" >
     <div class="container">
     <ion-card-header>
-      <ion-card-title class="title">Name</ion-card-title>
-      <ion-card-subtitle>Location: </ion-card-subtitle>
-       <ion-card-subtitle>Age: </ion-card-subtitle>
-       <ion-card-subtitle>Contact: </ion-card-subtitle>
+      <ion-card-title class="title">Name: {{candidate.username}}</ion-card-title>
+      <ion-card-subtitle>Location:{{candidate.address}} </ion-card-subtitle>
+       <ion-card-subtitle>Birthday: {{candidate.dob}}</ion-card-subtitle>
+       <ion-card-subtitle>Contact: {{candidate.number}}</ion-card-subtitle>
+       <ion-card-subtitle>Email: {{candidate.email}}</ion-card-subtitle>
+       <ion-card-subtitle>Gender: {{candidate.gender}}</ion-card-subtitle>
     </ion-card-header>
     <ion-card-content>
       <ion-list>

@@ -57,7 +57,6 @@ async apply(){
   //getting user applying to job
     const user =  await Preferences.get({key : 'user'});
     const users_id = JSON.parse(user.value || '{}');
-console.log(users_id["id"]);
   this.service.apply_for_job(this.j_id, users_id['id']).subscribe(response=>{
     const str = JSON.stringify(response);
      const result = JSON.parse(str);

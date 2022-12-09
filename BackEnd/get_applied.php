@@ -6,11 +6,11 @@ header('Access-Control-Allow-Headers: * ');
 include "connection.php";
 
 
-$job_id = $_GET['id'];
 
 $response = [];
 
-if(isset($_GET['id']) && !empty($job_id)){
+if(isset($_GET['id']) && !empty($_GET['id'])){
+    $job_id = $_GET['id'];
     $query = $mysqli->prepare("SELECT * FROM applies_to, users WHERE applies_to.job_id=? AND users.id = applies_to.user_id");
     $query->bind_param("i", $job_id);
     $query->execute();

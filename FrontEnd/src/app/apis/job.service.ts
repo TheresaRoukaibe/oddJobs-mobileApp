@@ -9,6 +9,11 @@ export class JobService {
 
   constructor(private http:HttpClient) {}
 
+  get_applicants(id: string){
+    const response = this.http.get(this.base_url + "get_applied.php/?id=" + id);
+    return response;
+  }
+  
   get_jobs(){
     const response = this.http.get(this.base_url + "get_jobs.php");
     return response;

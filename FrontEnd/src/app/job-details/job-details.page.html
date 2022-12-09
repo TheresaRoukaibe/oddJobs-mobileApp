@@ -3,33 +3,38 @@
 
 <div class="header">
   <ion-buttons>
-    <ion-button>
-      <ion-icon class="icon" slot="icon-only" name="bookmark-outline">
+    <ion-button (click)="save()" >
+      <ion-icon [color]="isActive ? 'danger':'warning'" class="icon" slot="icon-only" name="bookmark">
       </ion-icon>
     </ion-button>
     </ion-buttons>
 </div>
 
-<div class="card">
+<div class="card" *ngFor="let job of jobs">
 <div class="title">
-  <h1 class="ion-item">Babysitter</h1>
-  <p class="ion-item">100<sup>$/hour</sup></p>
+  <h1 class="ion-item">{{job.title}}</h1>
+  <p class="ion-item">{{job.salary}}<sup>$/hour</sup></p>
 
 </div>
 
 <div class="details">
   <ion-label class="label">Location: </ion-label>
-  <ion-badge>Amchit</ion-badge>
+  <ion-badge>{{job.location}}</ion-badge>
 </div>
 
 <div class="details">
   <ion-label class="label">Age required: </ion-label>
-  <ion-badge>18 yrs old</ion-badge>
+  <ion-badge>{{job.age_requirement}}</ion-badge>
 </div>
 
 <div class="details">
-  <ion-label class="label">Contact person: </ion-label>
-  <ion-badge>03123123</ion-badge>
+  <ion-label class="label">Job Starts on: </ion-label>
+  <ion-badge>{{job.start_from}}</ion-badge>
+</div>
+
+<div class="details">
+  <ion-label class="label">Job Ends on: </ion-label>
+  <ion-badge>{{job.end_on}}</ion-badge>
 </div>
 
 <div class="description">
@@ -37,12 +42,12 @@
   </div>
   <ion-card>
     <ion-card-content>
-      Here's a small text description for the card content. Nothing more, nothing less.
+     {{job.description}}
     </ion-card-content>
   </ion-card>
 
 <div class="btn-div">
-  <ion-button class="btn" expand="block"> APPLY NOW </ion-button>
+  <ion-button class="btn" expand="block"> I CAN DO IT! </ion-button>
 </div>
 </div>
 

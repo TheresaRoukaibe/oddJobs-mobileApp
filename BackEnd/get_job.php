@@ -13,10 +13,10 @@ if(isset($_GET['id']) && !empty($job_id)){
     $query = $mysqli->prepare("SELECT * FROM jobs WHERE id=?");
     $query->bind_param("i", $job_id);
     $query->execute();
-    
     $results = $query->get_result();
     $rows = $results->num_rows;
-    
+
+
     if($rows ==0){
         $response['status'] = "No job with this id";
     }else{

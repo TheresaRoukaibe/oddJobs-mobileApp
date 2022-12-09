@@ -14,6 +14,11 @@ export class JobService {
     return response;
   }
 
+  get_job(id: string){
+      const response = this.http.get(this.base_url + "get_job.php/?id=" + id);
+      return response;
+  }
+
   addJob(title: string, salary:string, age:string, start_from:string, end_on:string, location:string, description:string, user_id:string){
     const headers: HttpHeaders = new HttpHeaders({'Content-Type' : 'application/json'});
     const options= { 

@@ -36,8 +36,10 @@ export class Tab1Page {
 
   
 
-  seeDetails() {
-    this.router.navigateByUrl('job-details');
+  seeDetails(job_id: string) {
+  this.router.navigate(["/job-details"], {state: { id : job_id }});
+
   }
+
 
 }

@@ -13,7 +13,23 @@ export class JobService {
     const response = this.http.get(this.base_url + "get_applied.php/?id=" + id);
     return response;
   }
-  
+
+  hire_candidate(job_id: string, user_id: string, user_hired_id: string){
+    const headers: HttpHeaders = new HttpHeaders({'Content-Type' : 'application/json'});
+    const options= { 
+      headers: headers
+    }
+
+    const body = {
+"job_id": job_id,
+"user_id" : user_id,
+"user_hired_id" : user_hired_id
+    }
+     const response = this.http.post(this.base_url + "hire.php", body, options);
+     
+      return response;
+
+  }
   get_jobs(){
     const response = this.http.get(this.base_url + "get_jobs.php");
     return response;

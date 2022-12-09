@@ -34,7 +34,7 @@ error:string = "";
   }
 
   goBack(){
-    this.router.navigateByUrl('tab3');
+    this.router.navigateByUrl('');
   }
 
   delete_job(job_id: string) {

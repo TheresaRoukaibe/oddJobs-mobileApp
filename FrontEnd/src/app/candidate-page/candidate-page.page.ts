@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { JobService } from '../apis/job.service';
-
+import { Preferences
+ } from '@capacitor/preferences';
 @Component({
   selector: 'app-candidate-page',
   templateUrl: './candidate-page.page.html',
@@ -29,6 +30,25 @@ error:string = "";
     }
     
     });
+  }
+
+  async hire(id: string){
+    const user =  await Preferences.get({key : 'user'});
+    const user_id = JSON.parse(user.value || '{}');
+    this.service.hire_candidate(this.job_id, user_id['id'], id).subscribe(response=>{
+      const str = JSON.stringify(response);
+       const result = JSON.parse(str);
+      const status = result['status'];
+       if(status == "Missing info" || status == "Missing information"){
+         this.error = "Please fill out all the fields!";
+       }else if (status == "User Hired"){
+         this.router.navigateByUrl('');
+       }else if (status == "User Already hired"){
+ this.error = "This user has already been notified!";
+       }
+      }
+       );
+
   }
 
 }

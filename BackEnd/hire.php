@@ -4,10 +4,10 @@ header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST');
 header('Access-Control-Allow-Headers: * ');
 include "connection.php";
-
+$_POST = json_decode(file_get_contents('php://input'), true);
 $job_id = $_POST['job_id'];
 $user_id = $_POST['user_id'];
-$user_hired_id = $_POST['user_id'];
+$user_hired_id = $_POST['user_hired_id'];
 $response = [];
 
 if((isset($_POST['job_id']) && !empty($job_id)) || (isset($_POST['user_id']) && !empty($user_id)) || (isset($_POST['user_hired_id']) && !empty($user_hired_id))){

@@ -19,12 +19,13 @@ if(isset($_POST['email']) && isset($_POST['password'])){
     $query = $mysqli->prepare("SELECT * FROM users WHERE email=?");
     $query->bind_param("s", $email);
     $query->execute();
-
-    if(!$query){
+    $results = $query->get_result();
+    $rows = $results->num_rows;
+    
+    if($rows==0){
         $response['status'] = "Account not found";
     }else{
-        $array = $query->get_result();
-        $user = $array->fetch_assoc();
+        $user = $results->fetch_assoc();
         $user_email = $user['email'];
         $user_pass = $user['password'];
         if(password_verify($password, $user_pass)){

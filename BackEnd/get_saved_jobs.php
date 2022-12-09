@@ -10,7 +10,7 @@ $user_id = $_GET['id'];
 
 $response = [];
 
-if(isset($_GET['id']) && !empty($user_id)){
+if(!empty($user_id)){
     $query = $mysqli->prepare("SELECT * FROM jobs, saves WHERE jobs.id=saves.job_id AND saves.user_id=?");
     $query->bind_param("i", $user_id);
     $query->execute();

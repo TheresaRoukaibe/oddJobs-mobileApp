@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { JobService } from '../apis/job.service';
+import { Preferences } from '@capacitor/preferences';
 
 @Component({
   selector: 'app-saved-jobs',
@@ -7,10 +9,18 @@ import { Router } from '@angular/router';
   styleUrls: ['./saved-jobs.page.scss'],
 })
 export class SavedJobsPage implements OnInit {
-
-  constructor(private router:Router) { }
-
-  ngOnInit() {
+  error:string = "";
+  constructor(private service:JobService, private router:Router) { }
+  jobs: any = [];
+  async ngOnInit() {
+    const user =  await Preferences.get({key : 'user'});
+    const user_id = JSON.parse(user.value || '{}');
+    this.service.get_saved(user_id["id"]).subscribe(response => {
+      this.jobs = response;
+    });
+    if(this.jobs["status"] == "No saves for this user"){
+      this.error = "Nothing saved yet!"
+    }
   }
   
   goBack(){

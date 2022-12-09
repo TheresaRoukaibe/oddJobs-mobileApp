@@ -23,7 +23,9 @@ export class Tab1Page {
   };
 
 
-
+goToJobs(){
+  this.router.navigateByUrl("my-posted-jobs");
+}
   ionViewDidEnter() {
     this.service.get_jobs().subscribe(response => {
       this.jobs = response;

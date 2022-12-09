@@ -16,6 +16,11 @@ private base_url:string = "http://localhost/oddJobs/BackEnd/";
     return response;
   }
 
+  get_user_jobs(id: string){
+    const response = this.http.get(this.base_url + "get_user_jobs.php/?id=" + id);
+    return response;
+}
+
   validateUser(email: string, password:string){
     const headers: HttpHeaders = new HttpHeaders({'Content-Type' : 'application/json'});
     const options= { 

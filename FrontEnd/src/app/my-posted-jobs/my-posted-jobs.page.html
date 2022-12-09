@@ -7,11 +7,14 @@
 </ion-header>
 
 <ion-content>
+  <ion-label style="color:grey; padding: 10%; justify-content:center; align-items: center; font-size: 12px; font-weight: 700;">
+    <h1>{{error}} </h1>
+  </ion-label>
   <ion-list>
-    <ion-item-sliding>
+    <ion-item-sliding *ngFor="let job of jobs">
       <ion-item>
         <ion-label >
-          <h1 class="title">Job Title</h1>
+          <h1 class="title">{{job.title}}</h1>
         </ion-label>
       </ion-item>
 
@@ -32,8 +35,8 @@
     </ion-list>
 
   <ion-fab slot="fixed" vertical="bottom" horizontal="start">
-  <ion-fab-button>
-    <ion-icon (click)="goBack" name="arrow-back"></ion-icon>
+  <ion-fab-button (click)="goBack()">
+    <ion-icon name="arrow-back"></ion-icon>
   </ion-fab-button>
 </ion-fab>
 

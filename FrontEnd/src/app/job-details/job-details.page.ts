@@ -27,12 +27,29 @@ constructor(private service:JobService, private router:Router) { }
 
   }
 
-  save()
+  async save()
 {
   if(this.isActive){
     this.isActive = false;
   }else{
-    this.isActive = true;
+    const user =  await Preferences.get({key : 'user'});
+    const users_id = JSON.parse(user.value || '{}');
+console.log(users_id["id"]);
+  this.service.save_job(this.j_id, users_id['id']).subscribe(response=>{
+    const str = JSON.stringify(response);
+     const result = JSON.parse(str);
+    const status = result['status'];
+    if(status == "Favorite own job"){
+      this.error = "This is already your job! Find it under your profile";
+    }else if (status == "Already saved"){
+      this.isActive = true;
+      this.error = "Already saved this job!";
+    }else if (status == "User Saved Job"){
+      this.isActive = true;
+this.router.navigateByUrl('');
+    }
+    }
+     );
   }
 }
 

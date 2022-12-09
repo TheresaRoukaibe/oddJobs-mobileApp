@@ -32,6 +32,23 @@ export class JobService {
     
 }
 
+save_job(job_id: string, user_id: string){
+  const headers: HttpHeaders = new HttpHeaders({'Content-Type' : 'application/json'});
+  const options= { 
+    headers: headers
+  }
+
+  const body = {
+"job_id": job_id,
+"user_id" : user_id
+  }
+
+
+   const response = this.http.post(this.base_url + "save_job.php", body, options);
+   
+    return response;
+  
+}
 
   get_job(id: string){
       const response = this.http.get(this.base_url + "get_job.php/?id=" + id);

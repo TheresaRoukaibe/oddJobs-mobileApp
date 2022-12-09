@@ -17,10 +17,16 @@ export class SavedJobsPage implements OnInit {
     const user_id = JSON.parse(user.value || '{}');
     this.service.get_saved(user_id["id"]).subscribe(response => {
       this.jobs = response;
-    });
-    if(this.jobs["status"] == "No saves for this user"){
+      const str = JSON.stringify(response);
+      const result = JSON.parse(str);
+     const status = result['status'];
+
+     if(status == "No saves for this user"){
       this.error = "Nothing saved yet!"
     }
+    
+    });
+   
   }
   
   goBack(){

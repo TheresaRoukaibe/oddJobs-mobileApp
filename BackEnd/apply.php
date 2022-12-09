@@ -5,14 +5,13 @@ header('Access-Control-Allow-Methods: GET, POST');
 header('Access-Control-Allow-Headers: * ');
 include "connection.php";
 
-$job_id = $_POST['job_id'];
-$user_id = $_POST['user_id'];
 $response = [];
 
+$_POST = json_decode(file_get_contents('php://input'), true);
 
-
-if((isset($_POST['job_id']) && !empty($job_id)) || (isset($_POST['user_id']) && !empty($user_id))){
-   
+if((isset($_POST['job_id']) || isset($_POST['user_id']))){
+    $job_id = $_POST['job_id'];
+    $user_id = $_POST['user_id'];
     $query = $mysqli->prepare("SELECT * FROM jobs WHERE id=?");
     $query->bind_param("i", $job_id);
     $query->execute();
@@ -29,10 +28,19 @@ if((isset($_POST['job_id']) && !empty($job_id)) || (isset($_POST['user_id']) && 
     if($rows ==0){
         $response['status'] = "No job with this id";
     }else{
-       $apply_query = $mysqli->prepare("INSERT into applies_to(user_id, job_id) VALUES(?,?)");
+       $sel_query = $mysqli->prepare("SELECT * FROM applies_to WHERE user_id = ? AND job_id = ?");
+       $sel_query->bind_param("ii", $user_id, $job_id);
+       $sel_query->execute();
+       $result = $sel_query->get_result();
+
+       if(mysqli_num_rows($result) != 0){
+        $response['status'] = "Already applied";
+       }else{
+        $apply_query = $mysqli->prepare("INSERT into applies_to(user_id, job_id) VALUES(?,?)");
        $apply_query->bind_param("ii", $user_id, $job_id);
        $apply_query->execute();
        $response['status'] = "User Applied for Job";
+    }
     }
     }
 

@@ -10,7 +10,12 @@
     </ion-buttons>
 </div>
 
+
+
 <div class="card" *ngFor="let job of jobs">
+
+      <ion-label  class="error" color="danger">{{error}}</ion-label>
+  
 <div class="title">
   <h1 class="ion-item">{{job.title}}</h1>
   <p class="ion-item">{{job.salary}}<sup>$/hour</sup></p>
@@ -47,7 +52,7 @@
   </ion-card>
 
 <div class="btn-div">
-  <ion-button class="btn" expand="block"> I CAN DO IT! </ion-button>
+  <ion-button (click)="apply()" class="btn" expand="block"> I CAN DO IT! </ion-button>
 </div>
 </div>
 

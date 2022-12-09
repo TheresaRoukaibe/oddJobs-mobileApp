@@ -7,7 +7,7 @@
 </ion-header>
 
 <ion-content>
-  <ion-label style="color:grey; padding: 10%; justify-content:center; align-items: center; font-size: 12px; font-weight: 700;">
+  <ion-label style="color:orangered; padding: 10%; justify-content:center; align-items: center; font-size: 12px; font-weight: 700;">
     <h1>{{error}} </h1>
   </ion-label>
   <ion-list>
@@ -27,7 +27,7 @@
   
       <ion-item-options side="end">
         <ion-item-option color="danger">
-          <ion-icon slot="icon-only" name="trash"></ion-icon>
+          <ion-icon (click)="delete_job(job.id)" slot="icon-only" name="trash"></ion-icon>
         </ion-item-option>
       </ion-item-options>
 

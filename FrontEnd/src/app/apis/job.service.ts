@@ -19,6 +19,11 @@ export class JobService {
     return response;
 }
 
+delete_job(id:string){
+  const response = this.http.get(this.base_url + "delete_job.php/?id=" + id);
+  return response;
+}
+
   apply_for_job(job_id: string, user_id: string){
     const headers: HttpHeaders = new HttpHeaders({'Content-Type' : 'application/json'});
     const options= { 

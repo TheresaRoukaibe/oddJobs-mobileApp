@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { UserService } from '../apis/user.service';
 import { Preferences } from '@capacitor/preferences';
-
+import { JobService } from '../apis/job.service';
 @Component({
   selector: 'app-my-posted-jobs',
   templateUrl: './my-posted-jobs.page.html',
@@ -10,7 +10,7 @@ import { Preferences } from '@capacitor/preferences';
 })
 export class MyPostedJobsPage implements OnInit {
 
-  constructor(private service:UserService, private router:Router) { }
+  constructor(private job_service:JobService, private service:UserService, private router:Router) { }
 error:string = "";
   jobs: any = [];
 
@@ -37,4 +37,16 @@ this.router.navigateByUrl('candidate-page');
     this.router.navigateByUrl('tab3');
   }
 
+  delete_job(job_id: string) {
+    this.job_service.delete_job(job_id).subscribe(response => {
+      const str = JSON.stringify(response);
+      const result = JSON.parse(str);
+     const status = result['status'];
+     if(status == "Job deleted"){
+      this.router.navigateByUrl('');
+     }else{
+      this.error = "Something went wrong";
+     }
+    });
+    }
 }

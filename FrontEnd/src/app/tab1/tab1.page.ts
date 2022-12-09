@@ -40,7 +40,6 @@ goToJobs(){
 
   seeDetails(job_id: string) {
   this.router.navigate(["/job-details"], {state: { id : job_id }});
-
   }
 
 

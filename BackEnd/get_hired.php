@@ -11,7 +11,7 @@ $user_id = $_GET['id'];
 $response = [];
 
 if(isset($_GET['id']) && !empty($user_id)){
-    $query = $mysqli->prepare("SELECT * FROM users, hires,jobs WHERE users.id=hires.user_id AND hires.user_hired_id=? AND hires.job_id = jobs.id");
+    $query = $mysqli->prepare("SELECT * FROM users,hires,jobs WHERE users.id=hires.user_id AND hires.user_hired_id=? AND hires.job_id = jobs.id");
     $query->bind_param("i", $user_id);
     $query->execute();
     

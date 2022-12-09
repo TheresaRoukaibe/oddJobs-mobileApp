@@ -14,14 +14,14 @@
   </ion-card>
 
   <ion-item>
-    <ion-badge slot="end">3</ion-badge>
+    <ion-badge slot="end">{{count}}</ion-badge>
     <ion-label class="label">People Hiring you</ion-label>
   </ion-item>
 
-  <ion-card>
+  <ion-card *ngFor="let user of users">
     <ion-card-header>
-      <ion-card-title class="title">John wants to hire you!</ion-card-title>
-      <ion-card-subtitle>Call him on: 234234</ion-card-subtitle>
+      <ion-card-title class="title">{{user.username}} wants to hire you for the {{user.title}} job!</ion-card-title>
+      <ion-card-subtitle>Call on: {{user.number}}</ion-card-subtitle>
     </ion-card-header>
   </ion-card>
 

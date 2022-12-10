@@ -21,3 +21,42 @@ is a Mobile Application where people can post "jobs" they need someone to do (i.
 ### Design
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
+# Preview & Features :iphone: 
+
+# Run the application on your PC 🔽
+
+### Prerequisites
+You need to have set up ionic and npm on the machine you are using: 
+<a href="https://ionicframework.com/docs/intro/cli"> Official Ionic Tutorial </a>
+
+### Installation 
+1. In CMD or Terminal run 
+ ```sh
+   git clone <repo-address>
+   ```
+   in the folder you'd like
+   
+2. ```sh
+   cd
+   ```
+   into your new cloned project from Terminal or CMD
+   
+3. Run 
+ ```sh
+   npm install
+   ```
+ to get all node_modules
+ 
+ 4. Run 
+ ```sh
+   ionic serve
+   ```
+   
+5. Restore the project state using
+```sh
+  ionic state restore
+   ```
+   
+6. Now you will be able to open the application through: 
+<a href="http://localhost:8200/"> Ionic Lab </a>
+<a href="http://localhost:8100/"> Ionic Serve </a>      

@@ -21,7 +21,7 @@ is a Mobile Application where people can post "jobs" they need someone to do (i.
 ### Design
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
-# Preview & Features :iphone: 
+# Preview & Features :iphone: :art:
 
 # Run the application on your PC 🔽
 
@@ -58,5 +58,5 @@ You need to have set up ionic and npm on the machine you are using:
    ```
    
 6. Now you will be able to open the application through: 
-<a href="http://localhost:8200/"> Ionic Lab </a>
+<a href="http://localhost:8200/"> Ionic Lab </a> OR 
 <a href="http://localhost:8100/"> Ionic Serve </a>      

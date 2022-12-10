@@ -19,7 +19,9 @@ is a Mobile Application where people can post "jobs" they need someone to do (i.
 
 <details>
 <summary>Database</summary>
- ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white)
+ <ul>
+ <li><a href="https://www.mysql.com/">MySQL</a></li>
+ </ul>
 </details>
 
 <details>

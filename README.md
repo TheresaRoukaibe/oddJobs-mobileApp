@@ -26,8 +26,13 @@ is a Mobile Application where people can post "jobs" they need someone to do (i.
 ### Sign In/Sign Up
 ![Screenshot (62)](https://user-images.githubusercontent.com/102797454/207853287-5c60e13c-5f8d-4a16-84f4-d649a8fd8d36.png)
 
-### Browse and search jobs
+### Browse/Search jobs
+![Screenshot (63)](https://user-images.githubusercontent.com/102797454/207853324-396ff19c-eef5-4041-9773-6ad94f0e179c.png)
+
+### Post a new job/See your account
 ![Screenshot (64)](https://user-images.githubusercontent.com/102797454/207853306-3d56501d-96c7-47cb-b329-91eaf927de8a.png)
+
+![Screenshot (65)](https://user-images.githubusercontent.com/102797454/207853315-78bab17e-fc9c-40fe-af56-555bd12be360.png)
 
 # Preview & Features :iphone: :art:
 https://user-images.githubusercontent.com/102797454/207423521-104dddf2-ca5b-4713-9485-e8ce60ecefdf.mp4

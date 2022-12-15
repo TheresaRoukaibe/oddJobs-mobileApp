@@ -12,7 +12,7 @@ export class Tab1Page {
   constructor(private service:JobService, private router:Router) {}
 
   jobs: any = [];
-
+searchTerm: string = "";
   handleRefresh(event: any) {
     setTimeout(() => {
       this.service.get_jobs().subscribe(response => {

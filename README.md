@@ -26,6 +26,9 @@ is a Mobile Application where people can post "jobs" they need someone to do (i.
 ### Sign In/Sign Up
 ![Screenshot (62)](https://user-images.githubusercontent.com/102797454/207853287-5c60e13c-5f8d-4a16-84f4-d649a8fd8d36.png)
 
+### Browse and search jobs
+![Screenshot (64)](https://user-images.githubusercontent.com/102797454/207853306-3d56501d-96c7-47cb-b329-91eaf927de8a.png)
+
 # Preview & Features :iphone: :art:
 https://user-images.githubusercontent.com/102797454/207423521-104dddf2-ca5b-4713-9485-e8ce60ecefdf.mp4
 

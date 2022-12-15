@@ -5,7 +5,7 @@
     </ion-title>
   </ion-toolbar>
   <ion-toolbar>
-    <ion-searchbar animated (ionChange)="_ionChange($event)"></ion-searchbar>
+    <ion-searchbar #search animated [(ngModel)]="searchTerm" (ionChange)="_ionChange($event)"></ion-searchbar>
   </ion-toolbar>
 </ion-header>
 
@@ -19,7 +19,7 @@
     </ion-toolbar>
   </ion-header>
 
-  <ion-card class="card" *ngFor="let job of jobs">
+  <ion-card class="card" *ngFor="let job of jobs | filter:searchTerm">
   <ion-card-header>
     <ion-card-title>{{job.title}}</ion-card-title>
     <ion-card-subtitle class="sub">{{job.location}}</ion-card-subtitle>

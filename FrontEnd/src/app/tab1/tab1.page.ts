@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { JobService } from '../apis/job.service';
+import { ViewChild } from '@angular/core';
+import { IonSearchbar } from '@ionic/angular';
 
 @Component({
   selector: 'app-tab1',
@@ -9,8 +11,12 @@ import { JobService } from '../apis/job.service';
 })
 export class Tab1Page {
 
-  constructor(private service:JobService, private router:Router) {}
 
+
+
+  constructor(private service:JobService, private router:Router) {
+   
+  }
   jobs: any = [];
 searchTerm: string = "";
   handleRefresh(event: any) {
@@ -33,6 +39,7 @@ goToJobs(){
     this.service.get_jobs().subscribe(response => {
       this.jobs = response;
     });
+    
   }
 
    goToAddPage() {

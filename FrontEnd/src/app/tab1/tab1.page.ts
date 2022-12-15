@@ -22,6 +22,9 @@ searchTerm: string = "";
     }, 2000);
   };
 
+  _ionChange(event: Event){
+console.log((<CustomEvent>event).detail.value);
+  }
 
 goToJobs(){
   this.router.navigateByUrl("my-posted-jobs");

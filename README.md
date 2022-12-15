@@ -7,6 +7,7 @@ is a Mobile Application where people can post "jobs" they need someone to do (i.
  
  # Built with :hammer_and_wrench:
  ### Client 
+ ##### 
 ![Ionic](https://img.shields.io/badge/Ionic-%233880FF.svg?style=for-the-badge&logo=Ionic&logoColor=white)
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
@@ -24,6 +25,10 @@ is a Mobile Application where people can post "jobs" they need someone to do (i.
 # Preview & Features :iphone: :art:
 https://user-images.githubusercontent.com/102797454/207423521-104dddf2-ca5b-4713-9485-e8ce60ecefdf.mp4
 
+# Database :bar_chart:
+
+You can download a Database with some data from the Database folder in the repository and run it using xampp and phpmyadmin!
+
 # Run the application on your PC 🔽
 
 ### Prerequisites
@@ -37,10 +42,11 @@ You need to have set up ionic and npm on the machine you are using:
    ```
    in the folder you'd like
    
-2. ```sh
+2. 
+```sh
    cd
    ```
-   into your new cloned project from Terminal or CMD
+  into your new cloned project from Terminal or CMD
    
 3. Run 
  ```sh

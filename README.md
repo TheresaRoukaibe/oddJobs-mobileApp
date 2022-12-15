@@ -32,6 +32,7 @@ is a Mobile Application where people can post "jobs" they need someone to do (i.
 ### Post a new job/See your account
 ![Screenshot (64)](https://user-images.githubusercontent.com/102797454/207853306-3d56501d-96c7-47cb-b329-91eaf927de8a.png)
 
+### View applicants for your jobs/Get notified when a user hires you
 ![Screenshot (65)](https://user-images.githubusercontent.com/102797454/207853315-78bab17e-fc9c-40fe-af56-555bd12be360.png)
 
 # Preview & Features :iphone: :art:

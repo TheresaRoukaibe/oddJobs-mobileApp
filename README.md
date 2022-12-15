@@ -23,6 +23,8 @@ is a Mobile Application where people can post "jobs" they need someone to do (i.
 ![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
 # Some Screenshots :framed_picture:
+### Sign In/Sign Up
+![Screenshot (62)](https://user-images.githubusercontent.com/102797454/207853287-5c60e13c-5f8d-4a16-84f4-d649a8fd8d36.png)
 
 # Preview & Features :iphone: :art:
 https://user-images.githubusercontent.com/102797454/207423521-104dddf2-ca5b-4713-9485-e8ce60ecefdf.mp4

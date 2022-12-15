@@ -42,7 +42,7 @@ https://user-images.githubusercontent.com/102797454/207423521-104dddf2-ca5b-4713
 
 You can download a Database with some data from the Database folder in the repository and run it using xampp and phpmyadmin!
 
-# Run the application on your PC 🔽
+# Run the application 🔽
 
 ### Prerequisites
 You need to have set up ionic and npm on the machine you are using: 
